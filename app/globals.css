@@ -1,0 +1,13 @@
+@import "@fontsource/vazirmatn/400.css";
+@import "@fontsource/vazirmatn/500.css";
+@import "@fontsource/vazirmatn/700.css";
+@import "@fontsource/vazirmatn/900.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { direction: rtl; }
+body { font-family: "Vazirmatn", Tahoma, sans-serif; color: #1E293B; background: #F8FAFC; }
+:focus-visible { outline: 2px solid #0D9488; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
