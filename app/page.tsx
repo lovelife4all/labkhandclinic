@@ -38,7 +38,15 @@ export default function HomePage() {
             </div>
           </div>
           <div className="bg-white rounded-3xl shadow-lg p-8 text-center border border-slate-100">
-            <div className="w-24 h-24 mx-auto rounded-full bg-primary-light grid place-items-center text-4xl font-black text-primary">ل</div>
+            <div className="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden border-4 border-primary-light shadow-md bg-primary-light">
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/doctor-dorkhah.jpg`}
+                alt={CLINIC.doctor}
+                width={136}
+                height={126}
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
             <h2 className="font-bold text-xl mt-4 text-brand">{CLINIC.doctor}</h2>
             <p className="text-muted text-sm mt-1">معرفی پزشک — اطلاعات تکمیلی پس از تأیید پزشک تکمیل می‌شود (نسخه آزمایشی)</p>
             <Link href="/about-doctor" className="inline-flex items-center gap-1 text-primary font-semibold mt-4">بیشتر بدانید <ChevronLeft size={16} /></Link>
