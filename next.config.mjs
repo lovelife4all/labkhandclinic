@@ -1,13 +1,18 @@
 /** @type {import('next').NextConfig} */
 const isPages = process.env.GITHUB_PAGES === "true";
+const basePath = isPages ? "/labkhandclinic" : "";
 
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   ...(isPages
     ? {
         output: "export",
-        basePath: "/labkhandclinic",
+        basePath,
+        trailingSlash: true,
         images: { unoptimized: true },
       }
     : {

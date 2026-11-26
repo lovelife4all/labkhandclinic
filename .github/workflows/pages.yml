@@ -2,7 +2,7 @@ name: Deploy Demo to GitHub Pages
 
 on:
   push:
-    branches: ["arena/6f6abd50-labkhandclinic", "main"]
+    branches: ["main", "arena/*"]
   workflow_dispatch:
 
 permissions:
@@ -27,8 +27,6 @@ jobs:
       - run: GITHUB_PAGES=true npm run build
       - run: touch out/.nojekyll
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
